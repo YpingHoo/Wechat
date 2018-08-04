@@ -23,4 +23,5 @@ def rebot(msg):
     reponse = requests.post(url=url, data=json.dumps(req_json), headers=headers)
 
     receive_data = json.loads(reponse.text)
-    print(receive_data['results'][0]['values'])
+    data = receive_data['results'][0]['values']['text']
+    return data

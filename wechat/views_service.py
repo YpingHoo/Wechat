@@ -15,11 +15,9 @@ def handle():
         data = get_request()
         msg_type = data.get('msg_type')
         if msg_type == 'text':
-            rebot("北京天气怎么样")
-            if data['content'] == "笑话":
-                msg = "哈哈"
-                response = response_text(data['to_user'], data['from_user'], msg)
-                return response
+            msg = rebot(data['content'])
+            response = response_text(data['to_user'], data['from_user'], msg)
+            return response
         elif msg_type == 'image':
             response = response_img(data['to_user'], data['from_user'], data['media_id'])
             return response
