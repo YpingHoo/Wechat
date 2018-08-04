@@ -13,7 +13,7 @@ manger.add_command('db', MigrateCommand)
 
 if __name__ == '__main__':
     # manger.run()
-    app.run()
+    app.run(host="45.63.55.131", port=80)
 
 
 
