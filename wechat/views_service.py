@@ -15,4 +15,5 @@ def handle():
 
         if content == "笑话":
             msg = "哈哈"
-            response_text(to_user, from_user, msg)
+            response = response_text(to_user, from_user, msg)
+            return response
