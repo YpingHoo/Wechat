@@ -1,6 +1,7 @@
 from flask import Blueprint, request
 from functions.token_verify import token_verify
 from functions.message_handle import get_request, response_text, response_img
+from functions.turing_rebot import rebot
 
 
 service_blueprint = Blueprint('service', __name__)
@@ -14,6 +15,7 @@ def handle():
         data = get_request()
         msg_type = data.get('msg_type')
         if msg_type == 'text':
+            rebot("北京天气怎么样")
             if data['content'] == "笑话":
                 msg = "哈哈"
                 response = response_text(data['to_user'], data['from_user'], msg)
