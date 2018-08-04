@@ -1,5 +1,6 @@
 import requests
 import json
+from config import Config
 
 
 def rebot(msg):
@@ -14,8 +15,8 @@ def rebot(msg):
                         "street": "信息路"}}
                 },
                 "userInfo": {
-                    "apiKey": "5efe0411b6504cfab550e7acacee2a41",
-                    "userId": "303633"}
+                    "apiKey": Config.TURING_APIKEY,
+                    "userId": Config.TURING_USERID}
                 }
 
     headers = {'content-type': 'application/json'}
