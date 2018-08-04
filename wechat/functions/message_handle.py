@@ -9,14 +9,20 @@ def get_request():
     to_user = xml_rec.find('ToUserName').text
     from_user = xml_rec.find('FromUserName').text
     msg_type = xml_rec.find('MsgType').text
-    data = tuple()
+
+    data = dict()
+    data['to_user'] = to_user
+    data['from_user'] = from_user
+    data['msg_type'] = msg_type
+
     if msg_type == 'text':
         content = xml_rec.find('Content').text
-        data = (to_user, from_user, content)
+        data['content'] = content
     elif msg_type == 'image':
         pic_url = xml_rec.find('PicUrl').text
         media_id = xml_rec.find('MediaId').text
-        data = (to_user, from_user, pic_url, media_id)
+        data['pic_url'] = pic_url
+        data['media_id'] = media_id
     print(msg_type)
     return data
 
