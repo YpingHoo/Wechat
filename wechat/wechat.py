@@ -12,7 +12,8 @@ manger.add_command('db', MigrateCommand)
 
 
 if __name__ == '__main__':
-    manger.run()
+    # manger.run()
+    app.run()
 
 
 

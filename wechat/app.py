@@ -16,7 +16,7 @@ def create_app(config):
     formatter = logging.Formatter('%(levelname)s %(filename)s : %(lineno)d %(message)s')
     file_log_handle.setFormatter(formatter)
     logging.getLogger().addHandler(file_log_handle)
-    app.logger = logging
+    # app.logger = logging
 
     app.register_blueprint(service_blueprint)
 
