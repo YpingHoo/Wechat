@@ -8,11 +8,11 @@ class Config(object):
 
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-    TURING_APIKEY = "5efe0411b6504cfab550e7acacee2a41"
-    TURING_USERID = "303633"
+    TURING_APIKEY = "----get turing123----"
+    TURING_USERID = "turing123 account"
 
-    WECHAT_APPID = 'wxb8df474148866694'
-    WECHAT_APPSECRET = '2a145d6e0fcf9461b7538300cf989927'
+    WECHAT_APPID = 'wechat public account'
+    WECHAT_APPSECRET = 'get secret'
 
 class DevelopConfig(Config):
     DEBUG = True
